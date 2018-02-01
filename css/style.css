@@ -22,6 +22,7 @@ h1{
 
 img{
     width:250px;
+    height:350px;
 }
 
 .section2{
@@ -29,5 +30,35 @@ img{
     min-height:100vh;
     max-width:900px;
     margin:auto;
+    /* display:flex;
+    justify-content:center;
+    align-items:center; */
+}
+
+#photo{
+    padding-top:100px;
+    padding-bottom:20px;
+}
+
+h2{
+    font-size:40px;
+    top:5px;
+}
+
+input{
+    display:inline-block;
+}
+
+input[type=button]{
+    background-color:rgb(28, 133, 28);
+    font-size:20px;
+    padding:10px;
+    border: solid black 2px;
+    cursor:pointer;
+    margin:8px;
+}
+
+input[type=button]:hover{
+    background-color:white;
 }
 
