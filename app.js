@@ -1,4 +1,4 @@
-//console.log('gallery');
+//section 1 coce;
 var i=0;
 var img=[];
 var time=2000;
@@ -18,7 +18,34 @@ function changeImg(){
     }
     setTimeout("changeImg()", time);
 };
-console.log(img);
-
+// console.log(img);
 
 window.onload=changeImg();
+
+//section 2 code;
+let a=0;
+const photo=document.querySelector('#photo');
+photo.src=img[0];
+const next=document.querySelector('#next');
+const previous=document.querySelector('#previous');
+
+next.addEventListener('click', function(e){
+    if(a<img.length-1){
+        a++;        
+    }
+    else{
+        a=0;
+    }
+    photo.src=img[a];
+});
+
+previous.addEventListener('click', function(e){
+    if(a>0){
+        a--;           
+    }
+    else{
+        a=img.length-1;   
+    }
+    photo.src=img[a];
+    e.preventDefault();
+});
