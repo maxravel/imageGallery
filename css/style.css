@@ -2,6 +2,7 @@
     margin:0px;
     padding:0px;
     text-align:center;
+    font-family: 'Lora', serif;
 }
 
 .section1{
@@ -47,6 +48,7 @@ h2{
 
 input{
     display:inline-block;
+    outline:none; /*removing border*/
 }
 
 input[type=button]{
