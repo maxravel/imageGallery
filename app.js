@@ -49,3 +49,29 @@ previous.addEventListener('click', function(e){
     photo.src=img[a];
     e.preventDefault();
 });
+
+//section3 code
+const photoOne=document.querySelector("#photoOne");
+const photoTwo=document.querySelector('#photoTwo');
+const photoThree=document.querySelector('#photoThree');
+const photoFour=document.querySelector('#photoFour');
+
+photoOne.addEventListener('click',function(e){
+    photoOne.classList.toggle("maximaze");;
+    e.preventDefault();
+});
+
+photoTwo.addEventListener('click',function(e){
+    photoTwo.classList.toggle("maximaze");;
+    e.preventDefault();
+});
+
+photoThree.addEventListener('click',function(e){
+    photoThree.classList.toggle("maximaze");;
+    e.preventDefault();
+});
+
+photoFour.addEventListener('click',function(e){
+    photoFour.classList.toggle("maximaze");;
+    e.preventDefault();
+});

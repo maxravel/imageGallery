@@ -76,7 +76,7 @@ input[type=button]:hover{
    flex-wrap:wrap; */
 }
 
-a{
+.section3 img{
     padding:30px;
 }
 
@@ -86,4 +86,15 @@ a{
     flex-wrap:wrap;
     align-items:center;
    justify-content: center;
+}
+
+#photoOne{
+
+}
+
+.maximaze{
+    width:500px;
+    height:750px;
+    /* position:relative;
+    margin:auto; */
 }
