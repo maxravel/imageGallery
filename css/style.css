@@ -44,6 +44,7 @@ img{
 h2{
     font-size:40px;
     top:5px;
+    padding-bottom:30px;
 }
 
 input{
@@ -64,3 +65,25 @@ input[type=button]:hover{
     background-color:white;
 }
 
+.section3{
+    margin:auto;
+    background-color:#888;
+    min-height:100vh;
+    max-width:900px;
+   /* display:flex;
+   align-items:center;
+   justify-content: center;
+   flex-wrap:wrap; */
+}
+
+a{
+    padding:30px;
+}
+
+.photo-section{
+    margin: auto;
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+   justify-content: center;
+}
