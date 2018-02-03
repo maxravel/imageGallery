@@ -76,21 +76,23 @@ input[type=button]:hover{
    flex-wrap:wrap; */
 }
 
-.section3 img{
+.section3 img, .section4 img{
     padding:30px;
+    cursor:pointer;
 }
 
 .photo-section{
+    /* position:relative; */
     margin: auto;
     display:flex;
     flex-wrap:wrap;
     align-items:center;
-   justify-content: center;
+    justify-content: center;
 }
 
-#photoOne{
+/* #photoOne{
 
-}
+} */
 
 .maximaze{
     width:500px;
@@ -98,3 +100,39 @@ input[type=button]:hover{
     /* position:relative;
     margin:auto; */
 }
+
+.section4{
+    margin:auto;
+    background-color:rgb(163, 163, 163);
+    min-height:100vh;
+    max-width:900px;
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+#lightBoxBg{
+    position:fixed;
+    top:0px;
+    left:0px;
+    opacity:0.94;
+    background-color:black;
+    height:100%;
+    width:100%;
+    display:none;
+}
+
+#lightBox{
+    position:fixed;
+    top:5px;
+    display:none;
+    /* width:500px;
+    height:750px; */
+}
+
+/* #ligtBoxImg{
+    width:500px;
+    height:750px;
+} */
