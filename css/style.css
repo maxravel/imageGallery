@@ -136,3 +136,17 @@ input[type=button]:hover{
     width:500px;
     height:750px;
 } */
+
+.section5{
+    min-height:100vh;
+    max-width:900px;
+    margin:auto;
+    background-color:#333;
+
+}
+
+#info{
+    color:white;
+    margin-top:5px;
+    font-size:17px;
+}

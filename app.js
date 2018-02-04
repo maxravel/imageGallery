@@ -1,4 +1,4 @@
-//section 1 coce;
+//section1 coce;
 var i=0;
 var img=[];
 var time=2000;
@@ -22,7 +22,8 @@ function changeImg(){
 
 window.onload=changeImg();
 
-//section 2 code;
+
+//section2 code;
 let a=0;
 const photo=document.querySelector('#photo');
 photo.src=img[0];
@@ -84,6 +85,7 @@ const photoF=document.querySelector('#photoF');
 const lb=document.querySelector('#lightBox');
 const lbImg=document.querySelector('#lightBoxImg');
 const lbBg=document.querySelector('#lightBoxBg');
+const info=document.querySelector('#info');
 
 photoO.addEventListener('click', function(e){
     lbBg.style.display="block";
@@ -92,6 +94,7 @@ photoO.addEventListener('click', function(e){
     lbImg.style.width="400px";
     lbImg.style.height="600px";
     lbImg.src=img[0];
+    info.innerText='Zeno of Citium';
     e.preventDefault();
 });
 
@@ -102,6 +105,7 @@ photoT.addEventListener('click', function(e){
     lbImg.style.width="400px";
     lbImg.style.height="600px";
     lbImg.src=img[1];
+    info.innerText='Evariste Galois';
     e.preventDefault();
 });
 
@@ -112,6 +116,7 @@ photoTh.addEventListener('click', function(e){
     lbImg.style.width="400px";
     lbImg.style.height="600px";
     lbImg.src=img[2];
+    info.innerText='Eric Satie';
     e.preventDefault();
 });
 
@@ -122,6 +127,7 @@ photoF.addEventListener('click', function(e){
     lbImg.style.width="400px";
     lbImg.style.height="600px";
     lbImg.src=img[3];
+    info.innerText='Jan III Sobieski';
     e.preventDefault();
 });
 
