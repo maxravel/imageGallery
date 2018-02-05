@@ -19,7 +19,6 @@ function changeImg(){
     setTimeout("changeImg()", time);
 };
 // console.log(img);
-
 window.onload=changeImg();
 
 
@@ -51,6 +50,7 @@ previous.addEventListener('click', function(e){
     e.preventDefault();
 });
 
+
 //section3 code
 const photoOne=document.querySelector("#photoOne");
 const photoTwo=document.querySelector('#photoTwo');
@@ -76,6 +76,7 @@ photoFour.addEventListener('click',function(e){
     photoFour.classList.toggle("maximaze");;
     e.preventDefault();
 });
+
 
 //section4 code
 const photoO=document.querySelector('#photoO');
@@ -142,3 +143,33 @@ lb.addEventListener('click', function(e){
     lbImg.style.display="none";
     lb.style.display="none;"
 });
+
+
+//section5 code
+const photoI=document.querySelector('#photoI');
+const photoII=document.querySelector('#photoII');
+const photoIII=document.querySelector('#photoIII');
+const photoIV=document.querySelector('#photoIV'); 
+const max=document.querySelector('#max');
+
+max.src=img[1];
+
+photoI.addEventListener('click', function(e){
+    max.src=img[0];
+    e.preventDefault();
+})
+
+photoII.addEventListener('click', function(e){
+    max.src=img[1];
+    e.preventDefault();
+})
+
+photoIII.addEventListener('click', function(e){
+    max.src=img[2];
+    e.preventDefault();
+})
+
+photoIV.addEventListener('click', function(e){
+    max.src=img[3];
+    e.preventDefault();
+})

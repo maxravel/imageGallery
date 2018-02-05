@@ -65,6 +65,8 @@ input[type=button]:hover{
     background-color:white;
 }
 
+
+
 .section3{
     margin:auto;
     background-color:#888;
@@ -100,6 +102,8 @@ input[type=button]:hover{
     /* position:relative;
     margin:auto; */
 }
+
+
 
 .section4{
     margin:auto;
@@ -137,16 +141,30 @@ input[type=button]:hover{
     height:750px;
 } */
 
+
+
 .section5{
     min-height:100vh;
     max-width:900px;
     margin:auto;
     background-color:#333;
-
 }
 
 #info{
     color:white;
     margin-top:5px;
     font-size:17px;
+}
+
+.section5 img{
+    width:100px;
+    height:150px;
+    margin:10px;
+    cursor:pointer;
+}
+
+#max{
+    width:300px;
+    height:450px;
+    border: solid 2px white;
 }
