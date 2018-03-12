@@ -26,6 +26,8 @@ img{
     height:350px;
 }
 
+
+
 .section2{
     background-color:#777;
     min-height:100vh;
@@ -49,7 +51,7 @@ h2{
 
 input{
     display:inline-block;
-    outline:none; /*removing border*/
+    outline:none; /*removing border */
 }
 
 input[type=button]{
@@ -132,14 +134,19 @@ input[type=button]:hover{
     position:fixed;
     top:5px;
     display:none;
-    /* width:500px;
-    height:750px; */
 }
 
-/* #ligtBoxImg{
-    width:500px;
-    height:750px;
-} */
+#info{
+    color:white;
+    margin-top:5px;
+    font-size:17px;
+}
+
+#lightBoxImg{
+    width:400px;
+    height:600px;
+    display:none;
+}
 
 
 
@@ -148,12 +155,6 @@ input[type=button]:hover{
     max-width:900px;
     margin:auto;
     background-color:#333;
-}
-
-#info{
-    color:white;
-    margin-top:5px;
-    font-size:17px;
 }
 
 .section5 img{
@@ -167,4 +168,54 @@ input[type=button]:hover{
     width:300px;
     height:450px;
     border: solid 2px white;
+}
+
+
+
+.section6{
+    min-height:100vh;
+    max-width:900px;
+    margin:auto;
+    background-color:rgb(92, 80, 80);
+}
+
+.container6{
+    border:white solid 3px;
+    background: white;
+    margin:auto;
+    max-width:320px;
+}
+
+/* .section6 img{
+    width:100px;
+    height: 150px;
+} */
+
+.main-img img{
+    width:320px;
+    height: 500px;
+}
+
+.imgs img{
+    width:75px;
+    height: 120px;
+    /* margin:0px;
+    padding:0px; */
+}
+
+.imgs{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap:5px;
+}
+
+@keyframes fadeIn{
+    to{
+        opacity:1;
+    }
+}
+
+.fade-in{
+    opacity:0;
+    animation: fadeIn 0.5s ease-in 1 forwards;
 }

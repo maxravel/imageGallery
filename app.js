@@ -1,4 +1,4 @@
-//section1 coce;
+//section1 code;
 var i=0;
 var img=[];
 var time=2000;
@@ -18,8 +18,8 @@ function changeImg(){
     }
     setTimeout("changeImg()", time);
 };
-// console.log(img);
 window.onload=changeImg();
+
 
 
 //section2 code;
@@ -51,6 +51,7 @@ previous.addEventListener('click', function(e){
 });
 
 
+
 //section3 code
 const photoOne=document.querySelector("#photoOne");
 const photoTwo=document.querySelector('#photoTwo');
@@ -78,6 +79,7 @@ photoFour.addEventListener('click',function(e){
 });
 
 
+
 //section4 code
 const photoO=document.querySelector('#photoO');
 const photoT=document.querySelector('#photoT');
@@ -92,8 +94,6 @@ photoO.addEventListener('click', function(e){
     lbBg.style.display="block";
     lb.style.display="block";
     lbImg.style.display="block";
-    lbImg.style.width="400px";
-    lbImg.style.height="600px";
     lbImg.src=img[0];
     info.innerText='Zeno of Citium';
     e.preventDefault();
@@ -103,8 +103,6 @@ photoT.addEventListener('click', function(e){
     lbBg.style.display="block";
     lb.style.display="block";
     lbImg.style.display="block";
-    lbImg.style.width="400px";
-    lbImg.style.height="600px";
     lbImg.src=img[1];
     info.innerText='Evariste Galois';
     e.preventDefault();
@@ -114,8 +112,6 @@ photoTh.addEventListener('click', function(e){
     lbBg.style.display="block";
     lb.style.display="block";
     lbImg.style.display="block";
-    lbImg.style.width="400px";
-    lbImg.style.height="600px";
     lbImg.src=img[2];
     info.innerText='Eric Satie';
     e.preventDefault();
@@ -125,8 +121,6 @@ photoF.addEventListener('click', function(e){
     lbBg.style.display="block";
     lb.style.display="block";
     lbImg.style.display="block";
-    lbImg.style.width="400px";
-    lbImg.style.height="600px";
     lbImg.src=img[3];
     info.innerText='Jan III Sobieski';
     e.preventDefault();
@@ -141,8 +135,9 @@ lbBg.addEventListener('click', function(e){
 lb.addEventListener('click', function(e){
     lbBg.style.display="none";
     lbImg.style.display="none";
-    lb.style.display="none;"
+    lb.style.display="none";
 });
+
 
 
 //section5 code
@@ -173,3 +168,32 @@ photoIV.addEventListener('click', function(e){
     max.src=img[3];
     e.preventDefault();
 })
+
+
+
+//section6 code 
+const current = document.querySelector('#current');
+const imgs = document.querySelectorAll('.imgs img');
+const opacity = 0.4
+
+imgs[1].style.opacity=opacity;
+
+imgs.forEach(d => 
+    d.addEventListener('click', imgClick)
+); // d is img, no matter what name it has
+
+function imgClick(e){
+    imgs.forEach(x => (x.style.opacity=1));
+    current.src=e.target.src;
+
+    //add fadeIn class
+    current.classList.add('fade-in');
+
+    //remove fadeIn
+    setTimeout(() => current.classList.remove('fade-in'), 500);
+
+    e.target.style.opacity=opacity;
+
+}
+
+//e => (current.src = e.target.src)
