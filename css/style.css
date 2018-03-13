@@ -21,7 +21,7 @@ h1{
     font-size:40px;
 }
 
-img{
+.section1 img{
     width:250px;
     height:350px;
 }
@@ -33,9 +33,11 @@ img{
     min-height:100vh;
     max-width:900px;
     margin:auto;
-    /* display:flex;
-    justify-content:center;
-    align-items:center; */
+}
+
+.section2 img{
+    width:250px;
+    height:350px;
 }
 
 #photo{
@@ -74,19 +76,9 @@ input[type=button]:hover{
     background-color:#888;
     min-height:100vh;
     max-width:900px;
-   /* display:flex;
-   align-items:center;
-   justify-content: center;
-   flex-wrap:wrap; */
-}
-
-.section3 img, .section4 img{
-    padding:30px;
-    cursor:pointer;
 }
 
 .photo-section{
-    /* position:relative; */
     margin: auto;
     display:flex;
     flex-wrap:wrap;
@@ -94,15 +86,16 @@ input[type=button]:hover{
     justify-content: center;
 }
 
-/* #photoOne{
-
-} */
+.img-section-3{
+    padding:30px;
+    cursor:pointer;
+    width:250px;
+    height:350px;
+}
 
 .maximaze{
     width:500px;
     height:750px;
-    /* position:relative;
-    margin:auto; */
 }
 
 
@@ -117,6 +110,13 @@ input[type=button]:hover{
     justify-content:center;
     align-items:center;
     flex-wrap:wrap;
+}
+
+.section4 img{
+    padding:30px;
+    cursor:pointer;
+    width:250px;
+    height:350px;
 }
 
 #lightBoxBg{
@@ -157,6 +157,10 @@ input[type=button]:hover{
     background-color:#333;
 }
 
+#photoII{
+    opacity:0.5;
+}
+
 .section5 img{
     width:100px;
     height:150px;
@@ -177,30 +181,25 @@ input[type=button]:hover{
     max-width:900px;
     margin:auto;
     background-color:rgb(92, 80, 80);
+    padding-top:10px;
 }
 
 .container6{
     border:white solid 3px;
     background: white;
     margin:auto;
-    max-width:320px;
+    max-width:350px;
 }
 
-/* .section6 img{
-    width:100px;
-    height: 150px;
-} */
-
 .main-img img{
-    width:320px;
+    width:350px;
     height: 500px;
 }
 
 .imgs img{
-    width:75px;
+    width:82px;
     height: 120px;
-    /* margin:0px;
-    padding:0px; */
+    cursor:pointer;
 }
 
 .imgs{
@@ -209,13 +208,14 @@ input[type=button]:hover{
     grid-gap:5px;
 }
 
+.fade-in{
+    opacity:0;
+    animation: fadeIn 0.5s ease-in 1 forwards;
+}
+
 @keyframes fadeIn{
     to{
         opacity:1;
     }
 }
 
-.fade-in{
-    opacity:0;
-    animation: fadeIn 0.5s ease-in 1 forwards;
-}

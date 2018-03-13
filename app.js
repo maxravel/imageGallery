@@ -151,21 +151,41 @@ max.src=img[1];
 
 photoI.addEventListener('click', function(e){
     max.src=img[0];
+    document.querySelector('#photoI').style.opacity=1;
+    document.querySelector('#photoII').style.opacity=1;
+    document.querySelector('#photoIII').style.opacity=1;
+    document.querySelector('#photoIV').style.opacity=1;
+    e.target.style.opacity=0.5;
     e.preventDefault();
 })
 
 photoII.addEventListener('click', function(e){
     max.src=img[1];
+    document.querySelector('#photoI').style.opacity=1;
+    document.querySelector('#photoII').style.opacity=1;
+    document.querySelector('#photoIII').style.opacity=1;
+    document.querySelector('#photoIV').style.opacity=1;
+    e.target.style.opacity=0.5;
     e.preventDefault();
 })
 
 photoIII.addEventListener('click', function(e){
     max.src=img[2];
+    document.querySelector('#photoI').style.opacity=1;
+    document.querySelector('#photoII').style.opacity=1;
+    document.querySelector('#photoIII').style.opacity=1;
+    document.querySelector('#photoIV').style.opacity=1;
+    e.target.style.opacity=0.5;
     e.preventDefault();
 })
 
 photoIV.addEventListener('click', function(e){
     max.src=img[3];
+    document.querySelector('#photoI').style.opacity=1;
+    document.querySelector('#photoII').style.opacity=1;
+    document.querySelector('#photoIII').style.opacity=1;
+    document.querySelector('#photoIV').style.opacity=1;
+    e.target.style.opacity=0.5;
     e.preventDefault();
 })
 
