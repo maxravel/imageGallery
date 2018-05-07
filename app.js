@@ -9,14 +9,7 @@ img[2]="https://www.8notes.com/images/artists/satie.jpg";
 img[3]="https://mm.pwn.pl/ency/jpg/583/1p/d04i0018.jpg";
 
 function changeImg(){
-    document.slide.src=img[i];
-    
-    // if(i<img.length-1){
-    //     i++;
-    // }
-    // else{
-    //     i=0;
-    // }
+    document.querySelector("#slide").src=img[i];
 
     i<img.length-1 ? i++ : i=0;
 
@@ -34,13 +27,6 @@ const next=document.querySelector('#next');
 const previous=document.querySelector('#previous');
 
 next.addEventListener('click', function(e){
-    
-    // if(a<img.length-1){
-    //     a++;        
-    // }
-    // else{
-    //     a=0;
-    // }
 
     a<img.length-1 ? a++ : a=0;
 
@@ -49,13 +35,6 @@ next.addEventListener('click', function(e){
 });
 
 previous.addEventListener('click', function(e){
-    
-    // if(a>0){
-    //     a--;           
-    // }
-    // else{
-    //     a=img.length-1;   
-    // }
 
     a>0 ? a-- : a=img.length-1;
 
@@ -65,90 +44,32 @@ previous.addEventListener('click', function(e){
 
 
 
-//******************************************************section3 code
-// const photoOne=document.querySelector("#photoOne");
-// const photoTwo=document.querySelector('#photoTwo');
-// const photoThree=document.querySelector('#photoThree');
-// const photoFour=document.querySelector('#photoFour');
-
-// photoOne.addEventListener('click',function(e){
-//     photoOne.classList.toggle("maximaze");;
-//     e.preventDefault();
-// });
-
-// photoTwo.addEventListener('click',function(e){
-//     photoTwo.classList.toggle("maximaze");;
-//     e.preventDefault();
-// });
-
-// photoThree.addEventListener('click',function(e){
-//     photoThree.classList.toggle("maximaze");;
-//     e.preventDefault();
-// });
-
-// photoFour.addEventListener('click',function(e){
-//     photoFour.classList.toggle("maximaze");;
-//     e.preventDefault();
-// });
-
-//section3 forEach usage
+//******************************************************section3 code;
+//creating nodeList of imgs:
 const imgs3=document.querySelectorAll('.section3 img');
-console.log(imgs3);
 
-imgs3.forEach(d => d.addEventListener('click', imgs3click));
+//converting nodeList (imgs3) to Array (z)
+var z =[];
+for(var x=0;x<imgs3.length;x++){
+    z.push(imgs3[x]);
+}
+//fastest way is: var arr = Array.prototype.slice.call(nodeList)
+
+//forEach works for array:
+z.forEach(d => d.addEventListener('click', imgs3click));
 
 function imgs3click(e){
+    z.forEach(q => q.classList.remove('maximaze'));
     e.target.classList.toggle('maximaze');
 }
 
 
 
-
-//************************************************section4 code
-// const photoO=document.querySelector('#photoO');
-// const photoT=document.querySelector('#photoT');
-// const photoTh=document.querySelector('#photoTh');
-// const photoF=document.querySelector('#photoF');
+//************************************************section4 code;
 const lb=document.querySelector('#lightBox');
 const lbImg=document.querySelector('#lightBoxImg');
 const lbBg=document.querySelector('#lightBoxBg');
 const info=document.querySelector('#info');
-
-// photoO.addEventListener('click', function(e){
-//     lbBg.style.display="block";
-//     lb.style.display="block";
-//     lbImg.style.display="block";
-//     lbImg.src=img[0];
-//     info.innerText='Zeno of Citium';
-//     e.preventDefault();
-// });
-
-// photoT.addEventListener('click', function(e){
-//     lbBg.style.display="block";
-//     lb.style.display="block";
-//     lbImg.style.display="block";
-//     lbImg.src=img[1];
-//     info.innerText='Evariste Galois';
-//     e.preventDefault();
-// });
-
-// photoTh.addEventListener('click', function(e){
-//     lbBg.style.display="block";
-//     lb.style.display="block";
-//     lbImg.style.display="block";
-//     lbImg.src=img[2];
-//     info.innerText='Eric Satie';
-//     e.preventDefault();
-// });
-
-// photoF.addEventListener('click', function(e){
-//     lbBg.style.display="block";
-//     lb.style.display="block";
-//     lbImg.style.display="block";
-//     lbImg.src=img[3];
-//     info.innerText='Jan III Sobieski';
-//     e.preventDefault();
-// });
 
 lbBg.addEventListener('click', function(e){
     lbBg.style.display="none";
@@ -162,106 +83,57 @@ lb.addEventListener('click', function(e){
     lb.style.display="none";
 });
 
-//******************************************************************section4 forEach
-const imgs4 = document.querySelectorAll('.section4 .photo-section img');
+const imgs4 = Array.prototype.slice.call(document.querySelectorAll('.section4 .photo-section img'));
 imgs4.forEach(x => x.addEventListener('click', imgs4click));
 function imgs4click(e){
     lbBg.style.display="block";
     lb.style.display="block";
     lbImg.style.display="block";
     lbImg.src=e.target.src;
-    info.innerText=e.target.alt;
+    info.textContent=e.target.alt;
 }
 
 
 
-//section5 code
-// const photoI=document.querySelector('#photoI');
-// const photoII=document.querySelector('#photoII');
-// const photoIII=document.querySelector('#photoIII');
-// const photoIV=document.querySelector('#photoIV'); 
+//*****************************************************section5 code;
 const max=document.querySelector('#max');
 
 max.src=img[1];
 
-// photoI.addEventListener('click', function(e){
-//     max.src=img[0];
-//     document.querySelector('#photoI').style.opacity=1;
-//     document.querySelector('#photoII').style.opacity=1;
-//     document.querySelector('#photoIII').style.opacity=1;
-//     document.querySelector('#photoIV').style.opacity=1;
-//     e.target.style.opacity=0.5;
-//     e.preventDefault();
-// })
-
-// photoII.addEventListener('click', function(e){
-//     max.src=img[1];
-//     document.querySelector('#photoI').style.opacity=1;
-//     document.querySelector('#photoII').style.opacity=1;
-//     document.querySelector('#photoIII').style.opacity=1;
-//     document.querySelector('#photoIV').style.opacity=1;
-//     e.target.style.opacity=0.5;
-//     e.preventDefault();
-// })
-
-// photoIII.addEventListener('click', function(e){
-//     max.src=img[2];
-//     document.querySelector('#photoI').style.opacity=1;
-//     document.querySelector('#photoII').style.opacity=1;
-//     document.querySelector('#photoIII').style.opacity=1;
-//     document.querySelector('#photoIV').style.opacity=1;
-//     e.target.style.opacity=0.5;
-//     e.preventDefault();
-// })
-
-// photoIV.addEventListener('click', function(e){
-//     max.src=img[3];
-//     document.querySelector('#photoI').style.opacity=1;
-//     document.querySelector('#photoII').style.opacity=1;
-//     document.querySelector('#photoIII').style.opacity=1;
-//     document.querySelector('#photoIV').style.opacity=1;
-//     e.target.style.opacity=0.5;
-//     e.preventDefault();
-// })
-
-//section5 forEach
-const imgs5 = document.querySelectorAll('.section5 img');
+const imgs5 = Array.prototype.slice.call(document.querySelectorAll('.opacity'));
 imgs5.forEach(a => a.addEventListener('click', imgs5click));
 
 function imgs5click(e){
     max.src=e.target.src;
     imgs5.forEach(d => d.style.opacity=1);
     e.target.style.opacity=0.5;
-
 }
 
 
 
-//section6 code 
+//******************************************************section6 code; 
 const current = document.querySelector('#current');
-const imgs = document.querySelectorAll('.imgs img');
+const imgs6 = Array.prototype.slice.call(document.querySelectorAll('.imgs6 img'));
 const opacity = 0.4
 
-imgs[1].style.opacity=opacity;
+imgs6[1].style.opacity=opacity;
 
-imgs.forEach(d => 
+imgs6.forEach(d => 
     d.addEventListener('click', imgClick)
 ); // d is img, no matter what name it has
 
 function imgClick(e){
 
-    imgs.forEach(x => (x.style.opacity=1));
+    imgs6.forEach(x => (x.style.opacity=1));
     
     current.src=e.target.src;
 
     //add fadeIn class
     current.classList.add('fade-in');
 
-    //remove fadeIn
+    //remove fadeIn, for next usage
     setTimeout(() => current.classList.remove('fade-in'), 500);
 
     e.target.style.opacity=opacity;
 
 }
-
-//e => (current.src = e.target.src)
